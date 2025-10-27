@@ -1,0 +1,31 @@
+@startuml
+class com.example.ex06.ex1.Bicycle {
++ void start()
++ void stop()
++ void accelerate()
+}
+
+class com.example.ex06.ex1.Motorcycle {
++ void start()
++ void stop()
++ void accelerate()
+}
+
+class com.example.ex06.ex1.Car {
++ void start()
++ void stop()
++ void accelerate()
+}
+
+abstract class com.example.ex06.ex1.Vehicle {
++ {abstract}void start()
++ {abstract}void stop()
++ {abstract}void accelerate()
+}
+
+
+
+com.example.ex06.ex1.Vehicle <|-- com.example.ex06.ex1.Bicycle
+com.example.ex06.ex1.Vehicle <|-- com.example.ex06.ex1.Motorcycle
+com.example.ex06.ex1.Vehicle <|-- com.example.ex06.ex1.Car
+@enduml
