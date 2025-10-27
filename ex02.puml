@@ -1,0 +1,41 @@
+@startuml
+abstract class com.example.ex06.ex2.Animal {
++ {abstract}void makeSound()
++ {abstract}void eat()
+}
+
+interface com.example.ex06.ex2.Flyable {
+~ void fly()
+}
+
+interface com.example.ex06.ex2.Runnable {
+~ void run()
+}
+
+class com.example.ex06.ex2.Bird {
++ void makeSound()
++ void eat()
++ void fly()
+}
+
+class com.example.ex06.ex2.Cat {
++ void makeSound()
++ void eat()
++ void run()
+}
+
+class com.example.ex06.ex2.Dog {
++ void makeSound()
++ void eat()
++ void run()
+}
+
+
+
+com.example.ex06.ex2.Flyable <|.. com.example.ex06.ex2.Bird
+com.example.ex06.ex2.Animal <|-- com.example.ex06.ex2.Bird
+com.example.ex06.ex2.Runnable <|.. com.example.ex06.ex2.Cat
+com.example.ex06.ex2.Animal <|-- com.example.ex06.ex2.Cat
+com.example.ex06.ex2.Runnable <|.. com.example.ex06.ex2.Dog
+com.example.ex06.ex2.Animal <|-- com.example.ex06.ex2.Dog
+@enduml
